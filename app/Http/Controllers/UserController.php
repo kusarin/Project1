@@ -12,12 +12,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $data = [
-            'errCode'   => 0,
-            'errMsg'    => '这是一条错误信息',
-            'data'  => '这是一条数据信息',
-        ];
-        return response()->json($data)->setEncodingOptions(JSON_UNESCAPED_UNICODE);
+        return response()->json(base64_decode($_GET['name1']))->setEncodingOptions(JSON_UNESCAPED_UNICODE);
     }
 
     public function add()

@@ -25,10 +25,10 @@ Route::get('/', function () {
 // Route::resource('text','App\Http\Controllers\UserController');
 // Route::get('info',array('App\Http\Controllers\UserController@info'));
 // Route::get('user/delete','App\Http\Controllers\UserController@destroy')->name('user.delete');
- Auth::routes();
+Auth::routes();
 
- Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
- Route::resource('users', 'App\Http\Controllers\UserController');
+Route::resource('users', 'App\Http\Controllers\UserController');
 Route::get('user/add','App\Http\Controllers\UserController@add');
 Route::post('user/store','App\Http\Controllers\UserController@store');
