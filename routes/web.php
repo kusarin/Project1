@@ -29,6 +29,6 @@ Route::get('/', function () {
 
  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+ Route::resource('users', 'App\Http\Controllers\UserController');
 Route::get('user/add','App\Http\Controllers\UserController@add');
 Route::post('user/store','App\Http\Controllers\UserController@store');
